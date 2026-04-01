@@ -17,6 +17,7 @@ public class RegisterServlet extends HttpServlet {
         String p=req.getParameter("password");
         if(p.equals("gehu@123"))
           resp.sendRedirect("index2.jsp");
-
+        else
+            resp.sendRedirect("index.jsp");
     }
 }

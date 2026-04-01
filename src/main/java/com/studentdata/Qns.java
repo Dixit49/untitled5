@@ -14,13 +14,13 @@ public class Qns {
     String op4;
     String ans;
 
-    public Qns(String op1, String ans, String op2, String op3, String op4, String qn, int qnid) {
+    public Qns(int qnid, String qns, String op1, String op2, String op3, String op4, String ans) {
         this.op1 = op1;
         this.ans = ans;
         this.op2 = op2;
         this.op3 = op3;
         this.op4 = op4;
-        this.qn = qn;
+        this.qn = qns;
         this.qnid = qnid;
     }
     public Qns(){}
@@ -82,24 +82,16 @@ public class Qns {
     }
 
     public static void main(String[] args) {
-        Qns q=new Qns();
-       q.setQnid(131);
-       q.setQn("Days in a week");
-       q.setAns("7");
-       q.setOp1("3");
-       q.setOp2("7");
-       q.setOp3("5");
-       q.setOp4("11");
-        ApplicationContext context=new ClassPathXmlApplicationContext("config1.xml");
-        QnsDao qnsDao=context.getBean("qnsDaoimpl",QnsDao.class);
-        Qns qns=new Qns("n*n","n*n","n","2n","n*n"," Worst case time complexity of the bubble sort",39);
-        int r=qnsDao.insert(qns);
-        List<Qns> list=qnsDao.getqn();
-        Qns q1=list.get(0);
-        System.out.println(q1.qn +" ans" + q1.ans);
-       // int r=qnsDao.insert(q);
-        System.out.println("hellllo");
 
+       // ApplicationContext context=new ClassPathXmlApplicationContext("config1.xml");
+       // QnsDao dao=context.getBean("qnsDaoimpl",QnsDao.class);
+////        Qns qns=new Qns("n*n","n*n","n","2n","n*n"," Worst case time complexity of the bubble sort",39);
+////        int r=qnsDao.insert(qns);
+////        List<Qns> list=qnsDao.getqn();
+////        Qns q1=list.get(0);
+////        System.out.println(q1.qn +" ans" + q1.ans);
+////       // int r=qnsDao.insert(q);
+////        System.out.println("hellllo");
 
     }
 }
